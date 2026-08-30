@@ -17,7 +17,7 @@ python3 -m http.server 8080
 - Bidirectional **liquid** converter: cups, fl oz, tbsp, tsp, pints, quarts, gallons, mL
 - **Ingredient weight** mode: pick an ingredient, convert among cups / tbsp / tsp / fl oz (volume of that ingredient) and grams / ounces by weight
 - Cup-standard (assumption) control: US customary, US legal 240 mL, metric 250 mL, UK imperial
-- Lookup pages for the usual "how many X in a Y" queries
+- Lookup pages for the usual "how many X in a Y" queries, plus DIY / distance / cooling tools
 - Languages: English (default), Spanish, French, Portuguese, German — header dropdown (SVG flag + code), localStorage, `?lang=`
 - **Cups around the world** with a no-backend country comparator (US vs Spain by default)
 
@@ -82,7 +82,16 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-grams-in-an-ounce.html` — 28.3495 g (weight)
 - `cups-around-the-world.html` — country / cup conventions + comparator
 - `world.js` — comparator UI
+- `lookup-util.js` — shared parse/format helpers for lookup calculators
+- `how-many-bags-of-concrete.html` — slab/footing → bags (`concrete.js`; QUIKRETE yields)
+- `how-many-steps-in-a-mile.html` — steps ↔ miles (`steps.js`; ACE 2,000 labeled average)
+- `how-many-btu-to-cool-a-room.html` — sq ft → BTU (`btu.js`; ENERGY STAR chart)
+- `how-many-gallons-of-paint.html` — walls → gallons (`paint.js`; Behr 250–400 sq ft/gal)
+- `how-many-ounces-in-a-pound.html` — **16 oz** avoirdupois (NIST; not fluid ounces)
+- `how-many-feet-in-a-mile.html` — **5,280 ft** statute mile (NIST)
+- `how-many-square-feet-in-an-acre.html` — **43,560 sq ft** (NIST)
+- `factor.js` — amount × sourced factor for pound / mile / acre pages
 
 ## Product rules
 
-No fake stats, affiliate links, cookie banners, or newsletter popups. No invented gram densities.
+No fake stats, affiliate links, cookie banners, or newsletter popups. No invented gram densities, bag yields, stride formulas, BTU multipliers, or paint coverage. If a number cannot be sourced, it is omitted (no lumens page; no invented EU 25 kg concrete yield).

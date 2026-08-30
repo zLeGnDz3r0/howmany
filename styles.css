@@ -947,3 +947,86 @@ details[open] > .lang-btn::after {
   letter-spacing: -0.02em;
   margin: 1.6rem 0 0.55rem;
 }
+
+/* Lookup calculators (concrete, steps, BTU, paint) */
+
+.converter-dims {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 0.85rem;
+}
+@media (min-width: 720px) {
+  .converter-dims-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .converter-dims-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .converter-dims-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.option-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.15rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+  color: var(--ink);
+}
+.option-row legend {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 650;
+  padding: 0;
+  margin: 0 0 0.35rem;
+}
+.option-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+.option-row input[type="checkbox"],
+.option-row input[type="radio"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--accent);
+}
+
+.waste-row {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 0.25rem;
+}
+@media (min-width: 520px) {
+  .waste-row {
+    grid-template-columns: minmax(8rem, 12rem) 1fr;
+    align-items: end;
+  }
+}
+
+tr.is-hit td {
+  background: var(--paper-2);
+}
+
+.answer-block .result-out {
+  margin: 0;
+}
+
+.dir-group {
+  margin: 1.35rem 0 0.2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.dir-group:first-child {
+  margin-top: 0;
+}

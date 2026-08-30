@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many bags of concrete? Slab calculator</title>
+  <meta name="description" content="Size a slab or footing (length × width × depth) and get bags of concrete. Yields from QUIKRETE 40/60/80 lb bags and a sourced 25 kg bag. Optional waste is labeled as your assumption.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-bags-of-concrete.html">
+  <link rel="alternate" hreflang="es" href="./how-many-bags-of-concrete.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-bags-of-concrete.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-bags-of-concrete.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-bags-of-concrete.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many 80 lb bags of concrete do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the pour volume in cubic feet by 0.60. QUIKRETE lists an 80 lb bag at about 0.60 ft³ (17 L). Round up to whole bags. Example: a 10 × 10 ft slab 4 in thick is 33.33 ft³ → 56 bags before any waste extra."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a 60 lb or 40 lb bag yield?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "QUIKRETE Concrete Mix TDS: 60 lb ≈ 0.45 ft³ (12.7 L); 40 lb ≈ 0.30 ft³ (8.5 L). A 50 lb bag is 0.375 ft³; a 90 lb bag is 0.675 ft³."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you include a waste factor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only if you type one. Waste is an optional assumption you set (default 10%), not a QUIKRETE number. The data sheet does not publish a waste percentage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about 25 kg bags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Westcon/Canadian-style 25 kg (55 lb) packaged concrete mix bag is listed at about 11.7 L (0.41 cu ft). That is not a generic EU 25 kg yield — other brands differ, so we do not invent one."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="concrete">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="concrete.kicker">Summer DIY · slab / footing</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">62</span>
+        <span class="answer-unit" id="answer-unit" data-i18n="concrete.unit">80 lb bags</span>
+        <p class="answer-eq" id="answer-eq">for this pour · optional waste labeled below</p>
+      </div>
+
+      <h1 data-i18n="concrete.h1">How many bags of concrete?</h1>
+      <p class="lede" data-i18n-html="concrete.lede">Enter length × width × depth. Bag counts use <strong>published yields</strong> from the QUIKRETE Concrete Mix data sheet (80 lb ≈ 0.60 ft³, 60 lb ≈ 0.45 ft³, 40 lb ≈ 0.30 ft³). Round up. Waste is optional and labeled as your assumption — not a manufacturer figure.</p>
+
+      <form class="converter" id="concrete-form" action="#" method="get">
+        <label class="field" for="conc-system"><span data-i18n="concrete.system">Units</span>
+          <select id="conc-system" name="sys">
+            <option value="us" selected data-i18n="concrete.sysUs">US · feet × feet × inches</option>
+            <option value="metric" data-i18n="concrete.sysMetric">Metric · metres × metres × centimetres</option>
+          </select>
+        </label>
+        <p class="using-now" id="conc-using">Using US dimensions. Yields from QUIKRETE TDS (cu ft). 25 kg row uses the sourced litre yield.</p>
+        <div class="converter-dims converter-dims-3">
+          <label class="field" for="conc-length"><span id="conc-len-lab">Length (ft)</span>
+            <input id="conc-length" name="length" type="text" inputmode="decimal" value="10" autocomplete="off">
+          </label>
+          <label class="field" for="conc-width"><span id="conc-wid-lab">Width (ft)</span>
+            <input id="conc-width" name="width" type="text" inputmode="decimal" value="10" autocomplete="off">
+          </label>
+          <label class="field" for="conc-depth"><span id="conc-dep-lab">Depth (in)</span>
+            <input id="conc-depth" name="depth" type="text" inputmode="decimal" value="4" autocomplete="off">
+          </label>
+        </div>
+        <div class="waste-row">
+          <label class="field" for="conc-waste"><span data-i18n="concrete.waste">Waste extra (%)</span>
+            <input id="conc-waste" name="waste" type="text" inputmode="decimal" value="10" autocomplete="off">
+          </label>
+          <p class="using-now" data-i18n="concrete.wasteNote">Optional assumption, not from QUIKRETE. Use 0 if you do not want extra. Default 10% is a common DIY buffer you can change.</p>
+        </div>
+        <p class="result-meta" id="conc-meta"></p>
+      </form>
+
+      <h2 data-i18n="concrete.tableH2">Bags for this pour</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="concrete.caption">Rounded up to whole bags · sourced yields</caption>
+          <thead>
+            <tr>
+              <th data-i18n="concrete.thBag">Bag</th>
+              <th data-i18n="concrete.thYield">Published yield</th>
+              <th data-i18n="concrete.thRaw">Exact</th>
+              <th data-i18n="concrete.thBuy">Buy</th>
+            </tr>
+          </thead>
+          <tbody id="conc-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="concrete.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="concrete.gotcha1"><strong>Yield is mixed volume, not bag size on the shelf.</strong> An 80 lb bag is 80 pounds of dry mix. After water it occupies about 0.60 cubic feet (QUIKRETE TDS).</li>
+        <li data-i18n-html="concrete.gotcha2"><strong>Waste is your number.</strong> The data sheet does not say “add 10%.” Leave it at 0, or set extra for spillage and uneven subgrade. It is labeled as an assumption.</li>
+        <li data-i18n-html="concrete.gotcha3"><strong>25 kg is not a universal EU bag.</strong> The 11.7 L figure is a sourced 25 kg (55 lb) packaged mix yield. Other European bags can differ; we do not invent them.</li>
+        <li data-i18n-html="concrete.gotcha4"><strong>This is not a structural design.</strong> Footings, reinforcement, and mix strength belong to local code and a contractor. QUIKRETE mix is for pours 2 in (50 mm) thick or more.</li>
+      </ul>
+
+      <h2 data-i18n="concrete.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="concrete.sources">QUIKRETE Concrete Mix Product No. 1101 data sheet (revised October 2022): 40 lb ≈ 0.30 ft³ (8.5 L); 50 lb ≈ 0.375 ft³ (10.6 L); 60 lb ≈ 0.45 ft³ (12.7 L); 80 lb ≈ 0.60 ft³ (17 L); 90 lb ≈ 0.675 ft³ (19.1 L). <a href="https://www.quikrete.com/pdfs/data_sheet-concrete%20mix%201101.pdf">quikrete.com TDS (PDF)</a>. 25 kg bag: Westcon Concrete Mix TDS, 25 kg (55 lb) ≈ 11.7 L (0.41 cu ft). 1 ft = 0.3048 m exactly. 1 yd³ = 27 ft³.</p>
+
+      <h2 data-i18n="concrete.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many 80 lb bags of concrete do I need?</summary>
+          <p>Divide the pour volume in cubic feet by 0.60. QUIKRETE lists an 80 lb bag at about 0.60 ft³ (17 L). Round up to whole bags.</p>
+        </details>
+        <details>
+          <summary>How much does a 60 lb or 40 lb bag yield?</summary>
+          <p>QUIKRETE Concrete Mix TDS: 60 lb ≈ 0.45 ft³ (12.7 L); 40 lb ≈ 0.30 ft³ (8.5 L).</p>
+        </details>
+        <details>
+          <summary>Do you include a waste factor?</summary>
+          <p>Only if you type one. Waste is an optional assumption you set, not a QUIKRETE number.</p>
+        </details>
+        <details>
+          <summary>What about 25 kg bags?</summary>
+          <p>A sourced 25 kg (55 lb) packaged mix bag is about 11.7 L (0.41 cu ft). Not a generic EU yield.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="concrete.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-gallons-of-paint.html" data-i18n="common.relatedPaint">gallons of paint</a></li>
+        <li><a href="./how-many-btu-to-cool-a-room.html" data-i18n="common.relatedBtu">BTU to cool a room</a></li>
+        <li><a href="./how-many-square-feet-in-an-acre.html" data-i18n="common.relatedAcre">sq ft in an acre</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Manufacturer yields as cited. Not a substitute for a contractor or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./concrete.js"></script>
+</body>
+</html>

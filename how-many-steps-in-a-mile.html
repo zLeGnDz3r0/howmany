@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many steps in a mile? Depends on your stride</title>
+  <meta name="description" content="Steps per mile and miles for N steps. Default 2,000 steps/mile from ACE, clearly labeled. Or set height (Scientific American step/height ratio) or measured step length. Not one number for every body.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-steps-in-a-mile.html">
+  <link rel="alternate" hreflang="es" href="./how-many-steps-in-a-mile.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-steps-in-a-mile.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-steps-in-a-mile.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-steps-in-a-mile.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many steps are in a mile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no single number for every body. The American Council on Exercise uses a round average of about 2,000 steps per mile. Your count depends on step length. 1 mile = 5,280 feet, so steps per mile = 5,280 ÷ your step length in feet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many miles is 10,000 steps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At ACE’s 2,000 steps/mile average, 10,000 steps is 5 miles. With a shorter step you get fewer miles; with a longer step, more. Use the converter with your step length."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use my height?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As an estimate only. Scientific American notes adult step length is about 2.2–2.5 feet and the step-to-height ratio is about 0.41–0.45 (they use ~0.43 to relate the two). Measure a known distance for a better number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a step the same as a stride?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Step length is one foot to the other. Stride length is two steps (the same foot twice). This page uses step length. Mixing them doubles or halves the mile count."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="steps">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="steps.kicker">Walking · not one body</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">2,000</span>
+        <span class="answer-unit" id="answer-unit" data-i18n="steps.unit">steps per mile</span>
+        <p class="answer-eq" id="answer-eq">ACE round average · labeled below</p>
+        <p class="answer-ml" id="answer-ml"></p>
+      </div>
+
+      <h1 data-i18n="steps.h1">How many steps in a mile?</h1>
+      <p class="lede" data-i18n-html="steps.lede">It depends on your step length. The <strong>American Council on Exercise</strong> uses a round average of about <strong>2,000 steps per mile</strong> — a mnemonic, not your legs. Set height (Scientific American ratio) or a measured step. Also: miles for N steps. 1 mile = 5,280 feet.</p>
+
+      <form class="converter" id="steps-form" action="#" method="get">
+        <fieldset class="option-row">
+          <legend data-i18n="steps.modeLegend">How to estimate</legend>
+          <label><input type="radio" name="step-mode" value="ace" checked> <span data-i18n="steps.modeAce">ACE average (2,000 / mile)</span></label>
+          <label><input type="radio" name="step-mode" value="height"> <span data-i18n="steps.modeHeight">Height (SA ~0.43 × height)</span></label>
+          <label><input type="radio" name="step-mode" value="length"> <span data-i18n="steps.modeLength">My step length</span></label>
+        </fieldset>
+
+        <div id="step-panel-ace">
+          <p class="using-now" data-i18n="steps.aceNote">Labeled average from ACE’s Walk This Way toolkit: “About 2,000 steps equal one mile.” That implies a 2.64 ft step — longer than Scientific American’s 2.2–2.5 ft adult range. It is a round walking fact, not a measured stride.</p>
+        </div>
+
+        <div id="step-panel-height" hidden>
+          <div class="converter-dims converter-dims-2">
+            <label class="field" for="step-h-system"><span data-i18n="steps.heightUnits">Height units</span>
+              <select id="step-h-system">
+                <option value="ftin" selected>ft + in</option>
+                <option value="cm">cm</option>
+              </select>
+            </label>
+            <div id="step-height-us" class="converter-dims converter-dims-2">
+              <label class="field" for="step-ft"><span data-i18n="steps.ft">Feet</span>
+                <input id="step-ft" type="text" inputmode="decimal" value="5" autocomplete="off">
+              </label>
+              <label class="field" for="step-in"><span data-i18n="steps.inch">Inches</span>
+                <input id="step-in" type="text" inputmode="decimal" value="6" autocomplete="off">
+              </label>
+            </div>
+            <div id="step-height-cm" hidden>
+              <label class="field" for="step-height"><span data-i18n="steps.cm">Height (cm)</span>
+                <input id="step-height" type="text" inputmode="decimal" value="168" autocomplete="off">
+              </label>
+            </div>
+          </div>
+          <p class="using-now" data-i18n="steps.heightNote">Estimate only: step length ≈ 0.43 × height (Scientific American / Science Buddies). They also give a range of about 0.41–0.45, shown under the answer. Measure a known path if you can.</p>
+        </div>
+
+        <div id="step-panel-length" hidden>
+          <div class="converter-dims converter-dims-2">
+            <label class="field" for="step-length"><span data-i18n="steps.length">Step length</span>
+              <input id="step-length" type="text" inputmode="decimal" value="2.4" autocomplete="off">
+            </label>
+            <label class="field" for="step-len-system"><span data-i18n="steps.lengthUnits">Units</span>
+              <select id="step-len-system">
+                <option value="ft" selected>feet</option>
+                <option value="in">inches</option>
+                <option value="cm">cm</option>
+              </select>
+            </label>
+          </div>
+          <p class="using-now" data-i18n="steps.lengthNote">Walk a known distance (Scientific American uses 20 ft), count steps, divide. That is step length, not stride (two steps).</p>
+        </div>
+
+        <label class="field" for="step-n"><span data-i18n="steps.nSteps">Miles for this many steps</span>
+          <input id="step-n" type="text" inputmode="decimal" value="10000" autocomplete="off">
+        </label>
+        <p class="result-meta" id="step-miles-out"></p>
+      </form>
+
+      <h2 data-i18n="steps.tableH2">Steps per mile</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="steps.caption">Same mile (5,280 ft) · different steps</caption>
+          <thead>
+            <tr>
+              <th data-i18n="steps.thSource">Source</th>
+              <th data-i18n="steps.thStep">Step (ft)</th>
+              <th data-i18n="steps.thSpm">Steps / mile</th>
+              <th data-i18n="steps.th10k">Miles in 10,000 steps</th>
+            </tr>
+          </thead>
+          <tbody id="step-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="steps.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="steps.gotcha1"><strong>Not one number for every body.</strong> Height, pace, and terrain change step length. ACE’s 2,000 is a labeled average.</li>
+        <li data-i18n-html="steps.gotcha2"><strong>Step ≠ stride.</strong> A stride is two steps. Pedometers that want “stride” sometimes mean step. Mixing them doubles the error.</li>
+        <li data-i18n-html="steps.gotcha3"><strong>ACE 2,000 vs SA 2.2–2.5 ft.</strong> Those adult step lengths are about 2,110–2,400 steps/mile — more steps than ACE’s round 2,000. Both are cited; they are not the same claim.</li>
+        <li data-i18n-html="steps.gotcha4"><strong>Related:</strong> a mile is 5,280 feet — see <a href="./how-many-feet-in-a-mile.html">how many feet in a mile</a>.</li>
+      </ul>
+
+      <h2 data-i18n="steps.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="steps.sources">ACE Walk This Way community toolkit (2015), fun fact 10: “About 2,000 steps equal one mile.” Scientific American / Science Buddies, “Stepping Science: Estimating Someone’s Height from Their Walk” (14 Nov 2013): adult step ≈ 2.2–2.5 ft; step/height ≈ 0.4 (range ~0.41–0.45); they use ~0.43 to relate step and height. 1 international mile = 5,280 ft = 1,609.344 m (1 ft = 0.3048 m exactly). NIST Handbook 44 Appendix C.</p>
+
+      <h2 data-i18n="steps.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many steps are in a mile?</summary>
+          <p>There is no single number for every body. ACE uses a round average of about 2,000 steps per mile.</p>
+        </details>
+        <details>
+          <summary>How many miles is 10,000 steps?</summary>
+          <p>At ACE’s 2,000 steps/mile average, 10,000 steps is 5 miles. Use your step length for a better figure.</p>
+        </details>
+        <details>
+          <summary>Can I use my height?</summary>
+          <p>As an estimate only. Scientific American notes a step-to-height ratio of about 0.41–0.45 (they use ~0.43).</p>
+        </details>
+        <details>
+          <summary>Is a step the same as a stride?</summary>
+          <p>No. Step length is one foot to the other. Stride is two steps.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="steps.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-feet-in-a-mile.html" data-i18n="common.relatedFtMile">feet in a mile</a></li>
+        <li><a href="./how-many-square-feet-in-an-acre.html" data-i18n="common.relatedAcre">sq ft in an acre</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Manufacturer yields as cited. Not a substitute for a contractor or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./steps.js"></script>
+</body>
+</html>
