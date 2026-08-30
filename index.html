@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>howmany — kitchen volume &amp; ingredient weight</title>
+  <meta name="description" content="Convert US cups, fluid ounces, tablespoons, teaspoons, pints, quarts, gallons, and milliliters. Switch cup standard (US, legal 240 mL, metric 250 mL, imperial). Convert cups of flour, sugar, butter to grams. Fluid ounces are not weight ounces.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./index.html">
+  <link rel="alternate" hreflang="es" href="./index.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./index.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./index.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./index.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many fluid ounces are in a US cup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 US cup equals 8 US fluid ounces (236.588 mL). These are fluid ounces (volume), not ounces of weight."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this converter use US or metric cups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Default is US customary cups. 1 US cup = 8 US fl oz = 236.588 mL. A metric cup is 250 mL. The US legal cup used on nutrition labels is 240 mL. Switch the cup standard on the converter; do not mix systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are fluid ounces the same as ounces?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Fluid ounces measure volume. Ounces (avoirdupois) measure weight. 1 US cup is 8 fluid ounces of volume; that is not 8 ounces by weight unless the ingredient happens to weigh that much. 1 US cup of all-purpose flour is 120 g (King Arthur)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many grams are in a cup of flour?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "King Arthur lists 1 US cup of all-purpose flour as 120 grams (about 4¼ oz by weight), not 8 ounces."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main" data-i18n="chrome.skipConverter">Skip to converter</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html" aria-current="page">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" aria-current="page" data-i18n="chrome.converter">Converter</a>
+        <a href="#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="home.kicker">US customary · liquid + weight</p>
+      <h1 data-i18n="home.h1">Kitchen converter</h1>
+      <p class="lede" data-i18n-html="home.lede">Cups, fluid ounces, tablespoons, teaspoons, pints, quarts, gallons, and milliliters — plus cups of an ingredient to grams. Default is US customary (1 cup = 8 fl oz = 236.588 mL), not a 250 mL metric cup and not weight ounces.</p>
+
+      <form class="converter" id="converter-form" action="#" method="get">
+        <div class="mode-toggle" role="group" data-i18n-aria="conv.modeGroup" aria-label="Converter mode">
+          <button type="button" id="mode-volume" aria-pressed="true" data-i18n="conv.modeVolume">Liquid volume</button>
+          <button type="button" id="mode-ingredient" aria-pressed="false" data-i18n="conv.modeIngredient">Ingredient weight</button>
+        </div>
+
+        <div class="assumptions">
+          <label class="field" for="cup-standard"><span data-i18n="conv.cupStandard">Cup standard</span>
+            <select id="cup-standard" name="std">
+              <option value="us" selected>US customary · 236.588 mL · 8 US fl oz</option>
+              <option value="legal">US legal / nutrition label · 240 mL</option>
+              <option value="metric">Metric cup · 250 mL (AU/NZ/CA)</option>
+              <option value="imperial">UK imperial · 284.131 mL (10 imp fl oz)</option>
+            </select>
+          </label>
+          <p class="using-now" id="using-now">Using US customary: 1 cup = 236.588 mL = 8 US fl oz. Tbsp = ½ US fl oz. Pint = 2 cups.</p>
+        </div>
+
+        <div class="ingredient-row" id="ingredient-row" hidden>
+          <label class="field" for="ingredient"><span data-i18n="conv.ingredient">Ingredient</span>
+            <select id="ingredient" name="ingredient">
+              <option value="flour" selected>All-purpose flour</option>
+              <option value="sugar">Granulated sugar</option>
+              <option value="brown-sugar">Brown sugar (packed)</option>
+              <option value="powdered-sugar">Powdered sugar (unsifted)</option>
+              <option value="butter">Butter</option>
+              <option value="water">Water</option>
+              <option value="milk">Milk (fresh)</option>
+              <option value="honey">Honey</option>
+              <option value="olive-oil">Olive oil</option>
+              <option value="oats">Old-fashioned / rolled oats</option>
+              <option value="cocoa">Unsweetened cocoa</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="converter-grid converter-row">
+          <label class="field" for="amount"><span data-i18n="conv.amount">Amount</span>
+            <input id="amount" name="amount" type="text" inputmode="decimal" value="1" autocomplete="off" spellcheck="false">
+          </label>
+          <label class="field" for="from-unit"><span data-i18n="conv.from">From</span>
+            <select id="from-unit" name="from">
+              <option value="cup" selected>cups</option>
+              <option value="floz">fluid ounces (fl oz)</option>
+              <option value="tbsp">tablespoons (tbsp)</option>
+              <option value="tsp">teaspoons (tsp)</option>
+              <option value="pint">pints (pt)</option>
+              <option value="quart">quarts (qt)</option>
+              <option value="gallon">gallons (gal)</option>
+              <option value="ml">milliliters (mL)</option>
+            </select>
+          </label>
+          <div class="swap-wrap">
+            <button type="button" class="swap" id="swap-units" title="Swap units" data-i18n="conv.swap" data-i18n-aria="conv.swapAria" aria-label="Swap from and to units">Swap</button>
+          </div>
+          <label class="field" for="to-unit"><span data-i18n="conv.to">To</span>
+            <select id="to-unit" name="to">
+              <option value="floz" selected>fluid ounces (fl oz)</option>
+              <option value="cup">cups</option>
+              <option value="tbsp">tablespoons (tbsp)</option>
+              <option value="tsp">teaspoons (tsp)</option>
+              <option value="pint">pints (pt)</option>
+              <option value="quart">quarts (qt)</option>
+              <option value="gallon">gallons (gal)</option>
+              <option value="ml">milliliters (mL)</option>
+            </select>
+          </label>
+        </div>
+        <div class="result" aria-live="polite">
+          <div class="result-out" id="result-num">8</div>
+          <p class="result-meta" id="result-meta">1 cup = 8 fluid ounces (US customary)</p>
+          <p class="result-weight-line" id="result-weight-line" hidden></p>
+        </div>
+        <dl class="eq-grid" id="eq-grid">
+          <div class="eq"><dt>Teaspoons</dt><dd data-unit="tsp">48 tsp</dd></div>
+          <div class="eq"><dt>Tablespoons</dt><dd data-unit="tbsp">16 tbsp</dd></div>
+          <div class="eq"><dt>Fluid ounces</dt><dd data-unit="floz">8 fl oz</dd></div>
+          <div class="eq"><dt>Cups</dt><dd data-unit="cup">1 cup</dd></div>
+          <div class="eq"><dt>Pints</dt><dd data-unit="pint">0.5 pt</dd></div>
+          <div class="eq"><dt>Quarts</dt><dd data-unit="quart">0.25 qt</dd></div>
+          <div class="eq"><dt>Gallons</dt><dd data-unit="gallon">0.0625 gal</dd></div>
+          <div class="eq"><dt>Milliliters</dt><dd data-unit="ml">236.588 mL</dd></div>
+        </dl>
+        <p class="warn" id="weight-warning" hidden>Fluid ounces ≠ ounces by weight. 1 cup of all-purpose flour is 120 g (about 4¼ oz), not 8 oz.</p>
+        <p class="sources-note" id="sources-note">Sources: King Arthur Baking Ingredient Weight Chart for baking ingredients. Water: 1 mL ≈ 1 g near 4 °C. See converter comments for full citations.</p>
+        <p class="hint" id="converter-hint" data-i18n-html="conv.hintVolume">Fractions work: <code>1/2</code>, <code>1/3</code>, <code>1 1/2</code>. Fluid ounces are volume. Weight ounces need an ingredient.</p>
+      </form>
+
+      <h2 id="pages" data-i18n="home.pagesH2">Lookup pages</h2>
+      <p class="note" data-i18n="home.pagesNote">Straight answers for the usual kitchen questions. Volume pages are US liquid measure unless marked as weight.</p>
+      <ul class="dir">
+        <li><a href="./how-many-ounces-in-a-cup.html"><span class="dir-q" data-i18n="home.dirOzCup">How many ounces in a cup?</span><span class="dir-a" data-i18n="home.dirOzCupA">8 fl oz</span></a></li>
+        <li><a href="./how-many-ounces-in-a-cup-of-flour.html"><span class="dir-q" data-i18n="home.dirFlour">How many ounces in a cup of flour?</span><span class="dir-a" data-i18n="home.dirFlourA">120 g / 4¼ oz wt</span></a></li>
+        <li><a href="./fluid-ounces-vs-ounces.html"><span class="dir-q" data-i18n="home.dirFloz">Fluid ounces vs ounces</span><span class="dir-a" data-i18n="home.dirFlozA">not the same</span></a></li>
+        <li><a href="./how-many-ounces-in-a-gallon.html"><span class="dir-q" data-i18n="home.dirOzGal">How many ounces in a gallon?</span><span class="dir-a" data-i18n="home.dirOzGalA">128 fl oz</span></a></li>
+        <li><a href="./how-many-tablespoons-in-a-cup.html"><span class="dir-q" data-i18n="home.dirTbsp">How many tablespoons in a cup?</span><span class="dir-a" data-i18n="home.dirTbspA">16 tbsp</span></a></li>
+        <li><a href="./how-many-teaspoons-in-a-tablespoon.html"><span class="dir-q" data-i18n="home.dirTsp">How many teaspoons in a tablespoon?</span><span class="dir-a" data-i18n="home.dirTspA">3 tsp</span></a></li>
+        <li><a href="./how-many-cups-in-a-quart.html"><span class="dir-q" data-i18n="home.dirCupQt">How many cups in a quart?</span><span class="dir-a" data-i18n="home.dirCupQtA">4 cups</span></a></li>
+        <li><a href="./how-many-cups-in-a-gallon.html"><span class="dir-q" data-i18n="home.dirCupGal">How many cups in a gallon?</span><span class="dir-a" data-i18n="home.dirCupGalA">16 cups</span></a></li>
+        <li><a href="./how-many-quarts-in-a-gallon.html"><span class="dir-q" data-i18n="home.dirQtGal">How many quarts in a gallon?</span><span class="dir-a" data-i18n="home.dirQtGalA">4 qt</span></a></li>
+        <li><a href="./how-many-grams-in-an-ounce.html"><span class="dir-q" data-i18n="home.dirGrams">How many grams in an ounce?</span><span class="dir-a" data-i18n="home.dirGramsA">28.3495 g</span></a></li>
+        <li><a href="./cups-around-the-world.html"><span class="dir-q" data-i18n="home.dirWorld">Cups around the world</span><span class="dir-a" data-i18n="home.dirWorldA">compare</span></a></li>
+      </ul>
+
+      <h2 data-i18n="home.ladderH2">US kitchen ladder</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="home.ladderCaption">Volume only · US customary (default)</caption>
+          <thead>
+            <tr>
+              <th data-i18n="home.thUnit">Unit</th>
+              <th data-i18n="home.thEquals">Equals</th>
+              <th data-i18n="home.thMl">mL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1 teaspoon</td><td>⅓ tbsp</td><td>4.929</td></tr>
+            <tr><td>1 tablespoon</td><td>3 tsp · ½ fl oz</td><td>14.787</td></tr>
+            <tr><td>1 fluid ounce</td><td>2 tbsp</td><td>29.574</td></tr>
+            <tr><td>1 cup</td><td>8 fl oz · 16 tbsp · 48 tsp</td><td>236.588</td></tr>
+            <tr><td>1 pint</td><td>2 cups · 16 fl oz</td><td>473.176</td></tr>
+            <tr><td>1 quart</td><td>2 pt · 4 cups · 32 fl oz</td><td>946.353</td></tr>
+            <tr><td>1 gallon</td><td>4 qt · 16 cups · 128 fl oz</td><td>3,785.412</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="home.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="home.gotcha1"><strong>US cup vs metric cup vs legal cup.</strong> Default here is the US customary cup: 8 fl oz = 236.588 mL. A metric cup is 250 mL. The US legal cup on nutrition labels is 240 mL. Use the cup-standard control — don’t mix them.</li>
+        <li data-i18n-html="home.gotcha2"><strong>Fluid ounces are not weight ounces.</strong> “8 ounces in a cup” means 8 <em>fluid</em> ounces of volume. An ounce of flour is weight (28.3495 g). 1 US cup of all-purpose flour is 120 g (King Arthur), about 4¼ oz by weight — not 8 oz. See <a href="./fluid-ounces-vs-ounces.html">fluid ounces vs ounces</a>.</li>
+        <li data-i18n-html="home.gotcha3"><strong>US vs imperial.</strong> A US fluid ounce is 29.5735 mL. An imperial (UK) fluid ounce is 28.4130625 mL. A US gallon is 128 US fl oz; an imperial gallon is 160 imperial fl oz.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerVolume">US customary liquid measures. Fluid ounces are volume, not weight. Switch cup standard on the converter if you need a 240 mL, 250 mL, or imperial cup.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./converter.js"></script>
+</body>
+</html>

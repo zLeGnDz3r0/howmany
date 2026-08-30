@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cups around the world — what 1 cup means</title>
+  <meta name="description" content="Compare kitchen cups: US 236.588 mL, metric 250 mL, historical UK 284 mL, Japanese 200 mL cup and 180 mL gō. Europe cooks in grams and millilitres. No invented Latin cup.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./cups-around-the-world.html">
+  <link rel="alternate" hreflang="es" href="./cups-around-the-world.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./cups-around-the-world.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./cups-around-the-world.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./cups-around-the-world.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why isn’t 1 cup the same everywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because “cup” is a kitchen convention, not a single SI unit. The US customary cup is 236.588 mL (8 US fl oz). Australia and New Zealand use 250 mL. A historical British cup was about 284 mL. Japan’s common measuring cup is 200 mL, and a gō is about 180 mL. Much of Europe does not use a cup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I am in Spain. Which cup should I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spanish recipes use grams and millilitres, not cups. If you are following a US recipe, use 236.588 mL (or weigh flour at 120 g per US cup of all-purpose, King Arthur). Do not assume a 250 mL metric cup unless the recipe is Australian, New Zealand, or another metric-cup source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a UK pint 16 ounces?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. An imperial pint is 20 imperial fluid ounces (568 mL). A US pint is 16 US fluid ounces (473 mL). The fluid ounces themselves also differ (29.5735 mL US vs 28.4130625 mL imperial)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Japan use a 200 mL cup or 180 mL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both, for different jobs. A common Japanese kitchen measuring cup (カップ) is 200 mL. Rice, sake, and the rice-cooker cup use the gō, about 180 mL. They are not interchangeable with a US cup."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="world">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./cups-around-the-world.html" aria-current="page" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <p class="kicker" data-i18n="world.kicker">Conventions · not one cup</p>
+      <h1 data-i18n="world.h1">Cups around the world</h1>
+      <p class="lede" data-i18n-html="world.lede">A “cup” is not a global unit. US recipes mean <strong>236.588 mL</strong> (8 US fl oz). Australia and New Zealand mean a <strong>250 mL</strong> metric cup. Much of Europe never uses a cup at all — grams and millilitres. Pick two places below. This page does not invent a Latin American cup or a single official Canadian cooking cup.</p>
+
+      <h2 data-i18n="world.compareH2">Country comparator</h2>
+      <p class="note" data-i18n="world.compareNote">Side by side: typical liquid unit, typical dry-baking unit, what “1 cup” means if they use cups, pint size if it matters, and whether a scale is the norm. Default: United States vs Spain. Systems are never mixed silently.</p>
+
+      <div class="comparator" id="country-compare">
+        <div class="compare-picks">
+          <label class="field" for="place-a"><span data-i18n="world.placeA">Place A</span>
+            <select id="place-a" name="a"></select>
+          </label>
+          <div class="compare-vs" id="compare-vs">vs</div>
+          <label class="field" for="place-b"><span data-i18n="world.placeB">Place B</span>
+            <select id="place-b" name="b"></select>
+          </label>
+        </div>
+        <div class="compare-grid" id="compare-out"></div>
+        <p class="compare-same" id="compare-same" hidden data-i18n="world.sameNote">These two places follow the same kitchen convention for home cooking: metric grams and millilitres. Cups show up mainly when someone follows a US (or Australian) recipe.</p>
+      </div>
+
+      <h2 data-i18n="world.regionsH2">What other countries actually say</h2>
+
+      <section class="region">
+        <h3 data-i18n="world.usH2">United States</h3>
+        <p data-i18n-html="world.usBody">Home recipes are written in US customary cups, tablespoons, and fluid ounces. <strong>1 US customary cup = 8 US fl oz = 236.588 mL</strong> (from the US gallon of 231 cubic inches). Nutrition labels use a different <strong>legal cup of 240 mL</strong> (21 CFR 101.9) — not the kitchen cup. Baking is still often scooped, though a scale is better; King Arthur lists 1 US cup of all-purpose flour as 120 g.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.caH2">Canada</h3>
+        <p data-i18n="world.caBody">Official measurement is metric. Canadian nutrition labelling uses a 250 mL cup. Home cooking is a mix: many newer recipes use millilitres and a 250 mL metric cup; plenty of cooks still follow US cups from US books and blogs; older books may use imperial fluid ounces. There is no single “official Canadian cooking cup” we can honestly pick — match the recipe’s source, or weigh.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.ukH2">United Kingdom</h3>
+        <p data-i18n-html="world.ukBody">Modern British recipes are mostly <strong>grams and millilitres</strong>. A kitchen scale is the norm for baking. Historically, a British “cup” was often half an imperial pint: <strong>10 imperial fl oz ≈ 284 mL</strong>. An <strong>imperial pint is 568 mL = 20 imperial fl oz</strong>, not 16 US fl oz. A US fluid ounce is 29.5735 mL; an imperial fluid ounce is 28.4130625 mL. Don’t swap pints.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.auH2">Australia</h3>
+        <p data-i18n-html="world.auBody">The <strong>metric cup of 250 mL</strong> is standard in Australian recipes. Liquids are often given in millilitres as well. The Australian tablespoon is <strong>20 mL</strong> (AS 1325), not the 15 mL / ½ US fl oz tablespoon. Cups remain common for home baking; grams appear too. Do not treat an Australian cup as 8 US fl oz.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.nzH2">New Zealand</h3>
+        <p data-i18n-html="world.nzBody">Like Australia, recipes use a <strong>250 mL metric cup</strong>. The New Zealand tablespoon is <strong>15 mL</strong> (3 teaspoons), not Australia’s 20 mL. Edmonds and other NZ sources state the 250 mL cup outright. Grams are common; cups have not disappeared.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.euH2">Europe (Spain, France, Germany, Portugal)</h3>
+        <p data-i18n-html="world.euBody">Home cooking is in <strong>grams and millilitres</strong>. Measuring cups marked in cups are uncommon except when following US blogs or imported gadgets. There is no Spanish, French, German, or Portuguese cooking cup to convert. If a Madrid kitchen meets a US cup of flour, weigh <strong>120 g</strong> (King Arthur’s US-cup figure) rather than hunting a local cup.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.jpH2">Japan</h3>
+        <p data-i18n-html="world.jpBody">Two sourced volumes, not one: a common Japanese kitchen measuring cup (<strong>1 カップ</strong>) is <strong>200 mL</strong>. Rice, sake, and the little cup that comes with a rice cooker use the traditional <strong>gō (合) ≈ 180 mL</strong>. They are not a US cup. Modern cookbooks increasingly list grams. Do not use a 200 mL cup as 1 gō of rice.</p>
+      </section>
+      <section class="region">
+        <h3 data-i18n="world.latamH2">Latin America</h3>
+        <p data-i18n-html="world.latamBody">Official units are metric (mL, grams, litres). There is <strong>no “Latin cup”</strong> to quote. Many home cooks still use US cups because so many recipes arrive from the United States. Treat that mix as a mix: if the recipe is US, use 236.588 mL; if it lists millilitres or grams, use those. Don’t average them.</p>
+      </section>
+
+      <h2 data-i18n="world.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="world.gotcha1"><strong>Never mix systems in one recipe.</strong> A US cup (236.588 mL), a metric cup (250 mL), a Japanese 200 mL cup, and a historical imperial cup (~284 mL) share a word, not a size.</li>
+        <li data-i18n-html="world.gotcha2"><strong>Pints are worse.</strong> US pint = 16 US fl oz ≈ 473 mL. Imperial pint = 20 imperial fl oz ≈ 568 mL. A UK pub pint is not a US measuring pint.</li>
+        <li data-i18n-html="world.gotcha3"><strong>Nutrition-label cups are legal definitions, not kitchen cups.</strong> US labels: 240 mL. Canadian labels: 250 mL. Neither is an excuse to rewrite a recipe that was tested in the other cup.</li>
+        <li data-i18n-html="world.gotcha4"><strong>Flour grams belong to a specific cup.</strong> 120 g is King Arthur’s figure for 1 <em>US customary</em> cup of all-purpose flour. It is not the weight of a 250 mL or 200 mL cup of flour.</li>
+      </ul>
+
+      <h2 data-i18n="world.sourcesH2">Sources</h2>
+      <p class="note" data-i18n="world.sources">US customary cup from the US gallon (231 in³) → 236.588 mL; 1 US fl oz = 29.5735 mL. US legal cup 240 mL: 21 CFR 101.9. Imperial pint and fluid ounce: UK Units of Measurement Regulations 1995 (1 imperial gallon = 4.54609 L; 20 fl oz in a pint). Imperial kitchen cup = 10 imperial fl oz (historical; not a 1995 listed unit). Australian metric cup 250 mL; Australian tablespoon 20 mL (AS 1325). NZ metric cup 250 mL, tablespoon 15 mL (Edmonds and NZ metric measures). Japanese gō ≈ 180 mL (Nippon.com; rice-cooker cup). Japanese 200 mL measuring cup: common kitchen カップ. King Arthur Baking Ingredient Weight Chart, AP flour 120 g / US cup (accessed 30 Aug 2026). Canada: metric official; labelling cup 250 mL; home recipes mixed — we do not pick a fake official cooking cup.</p>
+
+      <h2 data-i18n="world.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>Why isn’t 1 cup the same everywhere?</summary>
+          <p>Because “cup” is a kitchen convention, not a single SI unit. The US customary cup is 236.588 mL (8 US fl oz). Australia and New Zealand use 250 mL. A historical British cup was about 284 mL. Japan’s common measuring cup is 200 mL, and a gō is about 180 mL. Much of Europe does not use a cup.</p>
+        </details>
+        <details>
+          <summary>I am in Spain. Which cup should I use?</summary>
+          <p>Spanish recipes use grams and millilitres, not cups. If you are following a US recipe, use 236.588 mL (or weigh flour at 120 g per US cup of all-purpose, King Arthur). Do not assume a 250 mL metric cup unless the recipe is Australian, New Zealand, or another metric-cup source.</p>
+        </details>
+        <details>
+          <summary>Is a UK pint 16 ounces?</summary>
+          <p>No. An imperial pint is 20 imperial fluid ounces (568 mL). A US pint is 16 US fluid ounces (473 mL). The fluid ounces themselves also differ (29.5735 mL US vs 28.4130625 mL imperial).</p>
+        </details>
+        <details>
+          <summary>Does Japan use a 200 mL cup or 180 mL?</summary>
+          <p>Both, for different jobs. A common Japanese kitchen measuring cup (カップ) is 200 mL. Rice, sake, and the rice-cooker cup use the gō, about 180 mL. They are not interchangeable with a US cup.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="world.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+        <li><a href="./how-many-ounces-in-a-cup.html" data-i18n="common.relatedOzCup">fl oz in a cup</a></li>
+        <li><a href="./how-many-ounces-in-a-cup-of-flour.html" data-i18n="common.relatedFlour">oz in a cup of flour</a></li>
+        <li><a href="./fluid-ounces-vs-ounces.html" data-i18n="common.relatedFloz">fl oz vs oz</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p data-i18n="chrome.footerVolume">US customary liquid measures. Fluid ounces are volume, not weight. Switch cup standard on the converter if you need a 240 mL, 250 mL, or imperial cup.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./world.js"></script>
+</body>
+</html>
