@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many gallons of paint? Wall coverage calculator</title>
+  <meta name="description" content="Wall square footage to gallons of paint. Behr publishes 250–400 sq ft per gallon per coat. Choose the upper (smooth/primed) or lower (porous) figure. Optional second coat, doors, and windows using Behr’s averages.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-gallons-of-paint.html">
+  <link rel="alternate" hreflang="es" href="./how-many-gallons-of-paint.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-gallons-of-paint.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-gallons-of-paint.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-gallons-of-paint.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many gallons of paint do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wall area ÷ coverage per coat, times coats. Behr lists 250–400 sq ft per gallon per coat depending on porosity. This page does not invent a 350 midpoint: pick 400 (smooth/primed) or 250 (porous/textured). Round up."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I measure the walls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Behr: measure the room perimeter times wall height. For a rectangle that is 2 × (length + width) × height. Subtract openings. Behr’s averages: a window about 15 sq ft, a door about 20 sq ft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need two coats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often yes, especially for a color change. Behr says to factor in a second coat if necessary. That choice is labeled here as yours, not a hidden extra."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does spraying change the number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Behr’s TDS says coverage figures do not include material lost to spraying. Brush/roll numbers will under-buy if you spray."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="paint">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="paint.kicker">DIY · walls · one or two coats</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">2</span>
+        <span class="answer-unit" id="answer-unit" data-i18n="paint.unit">gallons to buy</span>
+        <p class="answer-eq" id="answer-eq">Behr 250–400 sq ft/gal · you pick which</p>
+        <p class="answer-ml" id="answer-ml"></p>
+      </div>
+
+      <h1 data-i18n="paint.h1">How many gallons of paint?</h1>
+      <p class="lede" data-i18n-html="paint.lede">Room length × width × wall height → wall area. <strong>Behr</strong> publishes <strong>250–400 sq ft per gallon per coat</strong>. We do not invent a 350 midpoint. Choose 400 (smooth, primed) or 250 (porous, textured). Doors and windows use Behr’s labeled averages (20 and 15 sq ft). Second coat is optional and labeled.</p>
+
+      <form class="converter" id="paint-form" action="#" method="get">
+        <div class="converter-dims converter-dims-3">
+          <label class="field" for="paint-length"><span data-i18n="paint.length">Length (ft)</span>
+            <input id="paint-length" type="text" inputmode="decimal" value="12" autocomplete="off">
+          </label>
+          <label class="field" for="paint-width"><span data-i18n="paint.width">Width (ft)</span>
+            <input id="paint-width" type="text" inputmode="decimal" value="12" autocomplete="off">
+          </label>
+          <label class="field" for="paint-height"><span data-i18n="paint.height">Wall height (ft)</span>
+            <input id="paint-height" type="text" inputmode="decimal" value="8" autocomplete="off">
+          </label>
+        </div>
+        <div class="converter-dims converter-dims-2">
+          <label class="field" for="paint-doors"><span data-i18n="paint.doors">Doors (Behr avg 20 sq ft each)</span>
+            <input id="paint-doors" type="text" inputmode="numeric" value="1" autocomplete="off">
+          </label>
+          <label class="field" for="paint-windows"><span data-i18n="paint.windows">Windows (Behr avg 15 sq ft each)</span>
+            <input id="paint-windows" type="text" inputmode="numeric" value="2" autocomplete="off">
+          </label>
+        </div>
+        <div class="converter-dims converter-dims-2">
+          <label class="field" for="paint-cover"><span data-i18n="paint.cover">Coverage (Behr range)</span>
+            <select id="paint-cover">
+              <option value="400" selected data-i18n="paint.cover400">400 sq ft/gal · smooth / primed (upper)</option>
+              <option value="250" data-i18n="paint.cover250">250 sq ft/gal · porous / textured (lower)</option>
+            </select>
+          </label>
+          <label class="field" for="paint-coats"><span data-i18n="paint.coats">Coats</span>
+            <select id="paint-coats">
+              <option value="1" data-i18n="paint.coat1">1 coat</option>
+              <option value="2" selected data-i18n="paint.coat2">2 coats (optional, labeled)</option>
+            </select>
+          </label>
+        </div>
+        <fieldset class="option-row">
+          <legend data-i18n="paint.ceilLegend">Ceiling</legend>
+          <label><input type="checkbox" id="paint-ceiling"> <span data-i18n="paint.ceiling">Add ceiling (length × width), per Behr</span></label>
+        </fieldset>
+        <p class="using-now" data-i18n="paint.using">Does not include spray loss (Behr TDS). Round up to whole gallons to buy.</p>
+      </form>
+
+      <h2 data-i18n="paint.tableH2">Area for this room</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="paint.caption">Square feet · Behr opening averages when counted</caption>
+          <thead>
+            <tr>
+              <th data-i18n="paint.thWhat">What</th>
+              <th data-i18n="paint.thSqft">sq ft</th>
+            </tr>
+          </thead>
+          <tbody id="paint-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="paint.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="paint.gotcha1"><strong>250 and 400 are both Behr’s numbers.</strong> Porous, rough, or a dramatic color change uses more paint (closer to 250). Smooth primed walls can reach 400. We don’t average them into a fake 350.</li>
+        <li data-i18n-html="paint.gotcha2"><strong>Door and window sizes are averages.</strong> Behr: ~15 sq ft per window, ~20 sq ft per door. Measure yours if they are unusual.</li>
+        <li data-i18n-html="paint.gotcha3"><strong>Second coat is a choice.</strong> Default here is two coats because color changes usually need it — labeled, and you can set one.</li>
+        <li data-i18n-html="paint.gotcha4"><strong>Spray waste is not in the coverage.</strong> Behr TDS: figures exclude spraying loss.</li>
+      </ul>
+
+      <h2 data-i18n="paint.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="paint.sources">Behr, “How Much Interior Paint to Buy”: 250–400 sq ft per gallon per coat for BEHR ULTRA Scuff Defense and PREMIUM PLUS; perimeter × height for walls; average window ~15 sq ft; average door ~20 sq ft; add ceiling L × W if painting it; factor a second coat if needed. <a href="https://www.behr.com/how-to/interior/determine-how-much-interior-paint-to-buy">behr.com how-to</a>. Premium Plus TDS: 250–400 sq ft/gal depending on method and porosity; does not include spray loss.</p>
+
+      <h2 data-i18n="paint.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many gallons of paint do I need?</summary>
+          <p>Wall area ÷ coverage per coat, times coats. Behr lists 250–400 sq ft per gallon. Round up.</p>
+        </details>
+        <details>
+          <summary>How do I measure the walls?</summary>
+          <p>Perimeter × height. Rectangle: 2 × (length + width) × height. Subtract openings.</p>
+        </details>
+        <details>
+          <summary>Do I need two coats?</summary>
+          <p>Often yes. Behr says to factor in a second coat if necessary. That choice is labeled here.</p>
+        </details>
+        <details>
+          <summary>Does spraying change the number?</summary>
+          <p>Behr’s TDS says coverage does not include spray loss.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="paint.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-bags-of-concrete.html" data-i18n="common.relatedConcrete">bags of concrete</a></li>
+        <li><a href="./how-many-btu-to-cool-a-room.html" data-i18n="common.relatedBtu">BTU to cool a room</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Manufacturer yields as cited. Not a substitute for a contractor or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./paint.js"></script>
+</body>
+</html>

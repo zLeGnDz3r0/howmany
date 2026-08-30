@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many BTU to cool a room? ENERGY STAR chart</title>
+  <meta name="description" content="Square footage to BTU for a room air conditioner using the ENERGY STAR capacity chart (8-ft ceiling). Sizing estimate, not an HVAC design. Optional sun/people/kitchen adjustments from ENERGY STAR. 12,000 BTU/h = 1 ton (DOE).">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-btu-to-cool-a-room.html">
+  <link rel="alternate" hreflang="es" href="./how-many-btu-to-cool-a-room.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-btu-to-cool-a-room.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-btu-to-cool-a-room.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-btu-to-cool-a-room.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many BTU do I need to cool a room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the ENERGY STAR room air-conditioner chart by floor area (8-foot ceiling). Example: 150–250 sq ft → 6,000 BTU/h; 450–550 sq ft → 12,000 BTU/h. Then apply ENERGY STAR’s adjustments for shade, sun, extra people, and kitchens. This is a sizing estimate, not an ACCA Manual J design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is that 20 BTU per square foot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A flat 20 BTU/sq ft is a common sales starting point. ENERGY STAR publishes a capacity chart by square-footage band instead. This page uses that chart, not a flat 20. The two are in the same ballpark for many rooms; they are not the same number."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tons is that?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 ton of cooling = 12,000 Btu/h (U.S. DOE). Divide the BTU/h figure by 12,000. A 12,000 BTU/h room unit is 1 ton."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does this search spike in summer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Room-AC sizing is a hot-weather question. In winter the same search is near zero. Heating load is a different calculation (and not this ENERGY STAR cooling chart)."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="btu">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="btu.kicker">Summer HVAC · room AC estimate</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">6,000</span>
+        <span class="answer-unit" id="answer-unit" data-i18n="btu.unit">BTU/h</span>
+        <p class="answer-eq" id="answer-eq">ENERGY STAR chart · sizing estimate, not a design</p>
+        <p class="answer-ml" id="answer-ml"></p>
+        <p class="answer-vol" id="btu-tons"></p>
+      </div>
+
+      <h1 data-i18n="btu.h1">How many BTU to cool a room?</h1>
+      <p class="lede" data-i18n-html="btu.lede"><strong>Sizing estimate, not an HVAC design.</strong> ENERGY STAR maps floor area to room-air-conditioner capacity (8-foot ceiling). Sun, shade, extra people, and kitchens have published adjustments. Climate and tall ceilings are caveats — ENERGY STAR does not give multipliers for those here, so we do not invent them. This search spikes in summer and is near-zero in winter.</p>
+
+      <form class="converter" id="btu-form" action="#" method="get">
+        <label class="field" for="btu-area-mode"><span data-i18n="btu.areaMode">Room size</span>
+          <select id="btu-area-mode">
+            <option value="sqft" selected data-i18n="btu.modeSqft">I know the square footage</option>
+            <option value="lw" data-i18n="btu.modeLw">Length × width (ft)</option>
+          </select>
+        </label>
+        <div id="btu-direct">
+          <label class="field" for="btu-sqft"><span data-i18n="btu.sqft">Area (sq ft)</span>
+            <input id="btu-sqft" type="text" inputmode="decimal" value="200" autocomplete="off">
+          </label>
+        </div>
+        <div id="btu-lw" class="converter-dims converter-dims-2" hidden>
+          <label class="field" for="btu-length"><span data-i18n="btu.length">Length (ft)</span>
+            <input id="btu-length" type="text" inputmode="decimal" value="16" autocomplete="off">
+          </label>
+          <label class="field" for="btu-width"><span data-i18n="btu.width">Width (ft)</span>
+            <input id="btu-width" type="text" inputmode="decimal" value="12.5" autocomplete="off">
+          </label>
+        </div>
+        <fieldset class="option-row">
+          <legend data-i18n="btu.sunLegend">Sun (ENERGY STAR ±10%)</legend>
+          <label><input type="radio" name="btu-sun" value="typical" checked> <span data-i18n="btu.sunTypical">Typical</span></label>
+          <label><input type="radio" name="btu-sun" value="shade"> <span data-i18n="btu.sunShade">Heavily shaded (−10%)</span></label>
+          <label><input type="radio" name="btu-sun" value="sun"> <span data-i18n="btu.sunSun">Very sunny (+10%)</span></label>
+        </fieldset>
+        <div class="converter-dims converter-dims-2">
+          <label class="field" for="btu-people"><span data-i18n="btu.people">People who regularly occupy the room</span>
+            <input id="btu-people" type="text" inputmode="numeric" value="2" autocomplete="off">
+          </label>
+          <fieldset class="option-row">
+            <legend data-i18n="btu.kitchenLegend">Kitchen?</legend>
+            <label><input type="checkbox" id="btu-kitchen"> <span data-i18n="btu.kitchen">Used in a kitchen (+4,000 BTU)</span></label>
+          </fieldset>
+        </div>
+        <p class="using-now" data-i18n="btu.peopleNote">ENERGY STAR: if more than two people regularly occupy the room, add 600 BTU for each additional person. We do not subtract for one occupant — they did not publish that.</p>
+      </form>
+
+      <h2 data-i18n="btu.tableH2">ENERGY STAR capacity chart</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="btu.caption">8-foot ceiling · BTU per hour · 1 ton = 12,000 BTU/h</caption>
+          <thead>
+            <tr>
+              <th data-i18n="btu.thArea">Area to be cooled (sq ft)</th>
+              <th data-i18n="btu.thBtu">Capacity (BTU/h)</th>
+              <th data-i18n="btu.thTons">Tons</th>
+            </tr>
+          </thead>
+          <tbody id="btu-chart-body"></tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="btu.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="btu.gotcha1"><strong>Estimate, not Manual J.</strong> ACCA Manual J is the residential load-calculation standard (insulation, windows, orientation, climate). A room-AC shopping chart is not that.</li>
+        <li data-i18n-html="btu.gotcha2"><strong>8-foot ceiling.</strong> ENERGY STAR says capacities assume an 8-ft ceiling and, for higher ceilings, to consider more capacity. They do not publish a multiplier, so we don’t invent one.</li>
+        <li data-i18n-html="btu.gotcha3"><strong>Too big is worse.</strong> ENERGY STAR: an oversized unit cools before it dehumidifies. Match the chart; don’t “round way up.”</li>
+        <li data-i18n-html="btu.gotcha4"><strong>Summer query, winter silence.</strong> Cooling BTU is a summer spike. Heating is a different load. This chart is room air conditioners, not a whole-house furnace.</li>
+      </ul>
+
+      <h2 data-i18n="btu.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="btu.sources">ENERGY STAR, Room Air Conditioners: square-footage capacity chart (8-ft ceiling); shade −10%; sun +10%; +600 BTU per person above two; +4,000 BTU in a kitchen. <a href="https://www.energystar.gov/products/room_air_conditioners">energystar.gov/products/room_air_conditioners</a>. 1 ton = 12,000 Btu/h: U.S. DOE Uniform Methods Project Ch. 4; DOE HVAC Right-Sizing webinar. ACCA Manual J is cited as the proper design method, not used numerically here.</p>
+
+      <h2 data-i18n="btu.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many BTU do I need to cool a room?</summary>
+          <p>Use the ENERGY STAR room air-conditioner chart by floor area. This is a sizing estimate, not an ACCA Manual J design.</p>
+        </details>
+        <details>
+          <summary>Is that 20 BTU per square foot?</summary>
+          <p>A flat 20 BTU/sq ft is a common sales starting point. This page uses ENERGY STAR’s capacity chart, not a flat 20.</p>
+        </details>
+        <details>
+          <summary>How many tons is that?</summary>
+          <p>1 ton of cooling = 12,000 Btu/h (U.S. DOE). Divide BTU/h by 12,000.</p>
+        </details>
+        <details>
+          <summary>Why does this search spike in summer?</summary>
+          <p>Room-AC sizing is a hot-weather question. In winter the same search is near zero.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="btu.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-bags-of-concrete.html" data-i18n="common.relatedConcrete">bags of concrete</a></li>
+        <li><a href="./how-many-gallons-of-paint.html" data-i18n="common.relatedPaint">gallons of paint</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Manufacturer yields as cited. Not a substitute for a contractor or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./btu.js"></script>
+</body>
+</html>
