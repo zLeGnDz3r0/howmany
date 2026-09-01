@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many weeks in a year? 52 weeks + leftover days</title>
+  <meta name="description" content="A common year is 52 weeks + 1 day (365 ÷ 7 = 52 remainder 1). A leap year is 52 weeks + 2 days (366 ÷ 7 = 52 remainder 2). ISO week years have 52 or 53 full weeks — a different count.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-weeks-in-a-year.html">
+  <link rel="alternate" hreflang="es" href="./how-many-weeks-in-a-year.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-weeks-in-a-year.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-weeks-in-a-year.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-weeks-in-a-year.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many weeks are in a year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "52 weeks plus leftover days. 365 ÷ 7 = 52 remainder 1 (common year). 366 ÷ 7 = 52 remainder 2 (leap year). That is 52 1/7 and 52 2/7 weeks, not a round 52."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it 52.1429 weeks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "365 ÷ 7 = 52 + 1/7, which is the repeating decimal 52.142857… . Rounding that to 52.1429 hides the remainder. This page shows the division."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do ISO weeks match the calendar year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not always. ISO 8601 week 1 is the week that includes the year’s first Thursday. An ISO week-numbering year has 52 or 53 full Monday–Sunday weeks, and can start or end in a neighboring calendar year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many weeks in a leap year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Still 52 weeks plus leftover days: 366 ÷ 7 = 52 remainder 2."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="weeks">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="weeks.kicker">Calendar · weeks vs leftover days</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">52</span>
+        <span class="answer-unit" id="answer-unit" data-i18n="weeks.unit">weeks + 1 day</span>
+        <p class="answer-eq" id="answer-eq" data-i18n="weeks.eq">365 ÷ 7 = 52 remainder 1 (common year)</p>
+        <p class="answer-ml" id="answer-ml" data-i18n="weeks.mlLine">52 1/7 weeks · the 1/7 is one leftover day, not a rounded 52.14</p>
+      </div>
+
+      <h1 data-i18n="weeks.h1">How many weeks in a year?</h1>
+      <p class="lede" data-i18n-html="weeks.lede">A common year is <strong>52 weeks + 1 day</strong>: 365 ÷ 7 = 52 remainder 1. A leap year is <strong>52 weeks + 2 days</strong>: 366 ÷ 7 = 52 remainder 2. The leftover days are why a calendar year is not a whole number of weeks. ISO week years are a different count (52 or 53 full weeks).</p>
+
+      <form class="converter" id="year-form" action="#" method="get">
+        <div class="assumptions">
+          <label class="field" for="year-kind"><span data-i18n="weeks.yearKind">Calendar year</span>
+            <select id="year-kind">
+              <option value="common" selected data-i18n="weeks.kindCommon">Common year · 365 days</option>
+              <option value="leap" data-i18n="weeks.kindLeap">Leap year · 366 days</option>
+            </select>
+          </label>
+          <p class="using-now" id="using-now">Using a common year: 365 ÷ 7 = 52 weeks remainder 1 day.</p>
+        </div>
+      </form>
+
+      <h2 data-i18n="weeks.tableH2">Days ÷ 7</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="weeks.caption">Integer division, remainder shown</caption>
+          <thead>
+            <tr>
+              <th data-i18n="weeks.thKind">Year</th>
+              <th data-i18n="weeks.thDays">Days</th>
+              <th data-i18n="weeks.thDiv">Division</th>
+              <th data-i18n="weeks.thResult">Weeks + leftover</th>
+            </tr>
+          </thead>
+          <tbody id="weeks-tbody">
+            <tr data-kind="common" class="is-hit"><td>Common</td><td>365</td><td>365 ÷ 7 = 52 remainder 1</td><td>52 weeks + 1 day (52 1/7)</td></tr>
+            <tr data-kind="leap"><td>Leap</td><td>366</td><td>366 ÷ 7 = 52 remainder 2</td><td>52 weeks + 2 days (52 2/7)</td></tr>
+            <tr data-kind="mean"><td>Mean Gregorian</td><td>365.2425</td><td>365.2425 ÷ 7 = 52.1775</td><td>USNO mean year; 146,097 days / 400 years</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="weeks.isoH2">ISO weeks are not leftover days</h2>
+      <p class="note" data-i18n-html="weeks.isoNote">ISO 8601 numbers whole Monday–Sunday weeks. Week 1 is the week that includes the year’s first Thursday. A week-numbering year then has <strong>52 or 53</strong> calendar weeks — not “52 + 1 day.” Days next to 1 January can belong to week 52/53 of the previous ISO year.</p>
+
+      <h2 data-i18n="weeks.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="weeks.gotcha1"><strong>Don’t quote 52.1429 without the division.</strong> 365 ÷ 7 = 52 + 1/7 = 52.142857… (repeating). Truncating to 52.14 or 52.1429 hides the remainder of 1 day.</li>
+        <li data-i18n-html="weeks.gotcha2"><strong>ISO weeks ≠ calendar leftover.</strong> Payroll and “week 53” talk uses ISO 8601 (52 or 53 full weeks), not 365 ÷ 7.</li>
+        <li data-i18n-html="weeks.gotcha3"><strong>Leap years add a second leftover day</strong>, not an extra week. 366 ÷ 7 still has remainder 2. Leap-day rule: <a href="./how-many-days-in-a-year.html">days in a year</a>.</li>
+      </ul>
+
+      <h2 data-i18n="weeks.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="weeks.sources">Days in the year: U.S. Naval Observatory, Leap Years — common year 365 days; leap year 366; mean Gregorian year 365.2425 days (97 leap days every 400 years). <a href="https://aa.usno.navy.mil/faq/leap_years">aa.usno.navy.mil/faq/leap_years</a>. Arithmetic: 365 = 52 × 7 + 1; 366 = 52 × 7 + 2; 400 × 365 + 97 = 146,097; 146,097 ÷ 7 = 20,871 (exactly). ISO 8601: first calendar week includes the first Thursday; a calendar year has 52 or 53 calendar weeks. <a href="https://www.iso.org/iso-8601-date-and-time-format.html">iso.org ISO 8601</a>.</p>
+
+      <h2 data-i18n="weeks.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many weeks are in a year?</summary>
+          <p>52 weeks plus leftover days. 365 ÷ 7 = 52 remainder 1 (common year). 366 ÷ 7 = 52 remainder 2 (leap year).</p>
+        </details>
+        <details>
+          <summary>Is it 52.1429 weeks?</summary>
+          <p>365 ÷ 7 = 52 + 1/7, which is the repeating decimal 52.142857… . Rounding that to 52.1429 hides the remainder. This page shows the division.</p>
+        </details>
+        <details>
+          <summary>Do ISO weeks match the calendar year?</summary>
+          <p>Not always. ISO 8601 week 1 is the week that includes the year’s first Thursday. An ISO week-numbering year has 52 or 53 full Monday–Sunday weeks.</p>
+        </details>
+        <details>
+          <summary>How many weeks in a leap year?</summary>
+          <p>Still 52 weeks plus leftover days: 366 ÷ 7 = 52 remainder 2.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="weeks.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-days-in-a-year.html" data-i18n="common.relatedDays">days in a year</a></li>
+        <li><a href="./how-many-seconds-in-a-day.html" data-i18n="common.relatedSec">seconds in a day</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Cited manufacturer or agency figures. Not a substitute for a contractor, HVAC design, or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./year-kind.js"></script>
+</body>
+</html>

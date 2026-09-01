@@ -17,7 +17,7 @@ python3 -m http.server 8080
 - Bidirectional **liquid** converter: cups, fl oz, tbsp, tsp, pints, quarts, gallons, mL
 - **Ingredient weight** mode: pick an ingredient, convert among cups / tbsp / tsp / fl oz (volume of that ingredient) and grams / ounces by weight
 - Cup-standard (assumption) control: US customary, US legal 240 mL, metric 250 mL, UK imperial
-- Lookup pages for the usual "how many X in a Y" queries, plus DIY / distance / cooling tools
+- Lookup pages for the usual "how many X in a Y" queries, plus DIY / distance / cooling / calendar / world tools
 - Languages: English (default), Spanish, French, Portuguese, German — header dropdown (SVG flag + code), localStorage, `?lang=`
 - **Cups around the world** with a no-backend country comparator (US vs Spain by default)
 
@@ -90,8 +90,17 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-ounces-in-a-pound.html` — **16 oz** avoirdupois (NIST; not fluid ounces)
 - `how-many-feet-in-a-mile.html` — **5,280 ft** statute mile (NIST)
 - `how-many-square-feet-in-an-acre.html` — **43,560 sq ft** (NIST)
-- `factor.js` — amount × sourced factor for pound / mile / acre pages
+- `how-many-teaspoons-in-a-cup.html` — **48 tsp**
+- `how-many-cups-in-a-pint.html` — **2 cups**
+- `factor.js` — amount × sourced factor for pound / mile / acre / seconds pages
+- `how-many-liters-in-a-gallon.html` — **3.785411784 L** US liquid (NIST 231 in³); imperial **4.54609 L** (UK); labeled switch (`gallon.js`)
+- `how-many-weeks-in-a-year.html` — **52 weeks + leftover days** (365÷7 remainder 1; 366÷7 remainder 2); ISO weeks 52 or 53
+- `how-many-days-in-a-year.html` — **365 / 366** Gregorian (USNO leap rule); not a sidereal year
+- `how-many-seconds-in-a-day.html` — **86,400** SI seconds (24×60×60); leap seconds cited from IERS/BIPM only
+- `how-many-countries-are-there.html` — **193** UN member states (UN list; South Sudan 14 July 2011)
+- `how-many-people-are-in-the-world.html` — **8.2 billion** mid-year 2024 (UN WPP 2024); dated estimate, not a live counter
+- `year-kind.js` — common vs leap toggle for weeks / days pages
 
 ## Product rules
 
-No fake stats, affiliate links, cookie banners, or newsletter popups. No invented gram densities, bag yields, stride formulas, BTU multipliers, or paint coverage. If a number cannot be sourced, it is omitted (no lumens page; no invented EU 25 kg concrete yield).
+No fake stats, affiliate links, cookie banners, or newsletter popups. No invented gram densities, bag yields, stride formulas, BTU multipliers, paint coverage, country totals, or live population counters. If a number cannot be sourced, it is omitted (no lumens page; no invented EU 25 kg concrete yield).
