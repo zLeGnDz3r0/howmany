@@ -1016,6 +1016,10 @@ tr.is-hit td {
   background: var(--paper-2);
 }
 
+th.is-std {
+  color: var(--accent);
+}
+
 .answer-block .result-out {
   margin: 0;
 }

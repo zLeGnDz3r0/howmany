@@ -5,6 +5,7 @@
  *   1 avoirdupois pound = 16 avoirdupois ounces
  *   8 furlongs = 1 mile = 5280 feet
  *   1 acre = 43,560 square feet
+ *   1 common day = 86,400 SI seconds (24 × 60 × 60; leap seconds are not this factor)
  *   https://www.nist.gov/document/2023-nist-handbook-44-appendix-c-0
  *
  * International foot 0.3048 m exactly (1959). Metric companions:
@@ -31,6 +32,13 @@
       factor: 43560,
       defaultAmount: 1,
       format: "int"
+    },
+    /* 24 × 60 × 60 SI seconds in a common day. Leap seconds are not this factor. */
+    secdy: {
+      factor: 86400,
+      defaultAmount: 1,
+      format: "int",
+      multiples: [1, 2, 7, 30, 365, 366]
     }
   };
 
@@ -69,7 +77,7 @@
   function fillTable(spec, amount) {
     var tbody = u().$("factor-tbody");
     if (!tbody || !isFinite(amount)) return;
-    var multiples = [0.25, 0.5, 1, 2, 5, 10];
+    var multiples = spec.multiples || [0.25, 0.5, 1, 2, 5, 10];
     var html = "";
     for (var i = 0; i < multiples.length; i++) {
       var n = amount * multiples[i];

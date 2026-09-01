@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many seconds in a day? 86,400 SI seconds</title>
+  <meta name="description" content="A common day is 86,400 SI seconds: 24 × 60 × 60. The SI second is the BIPM caesium definition. UTC leap seconds (IERS) make a rare UTC day 86,401 seconds — not the default here.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-seconds-in-a-day.html">
+  <link rel="alternate" hreflang="es" href="./how-many-seconds-in-a-day.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-seconds-in-a-day.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-seconds-in-a-day.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-seconds-in-a-day.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many seconds are in a day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "86,400 SI seconds in a common day: 24 hours × 60 minutes × 60 seconds. That is the usual civil count."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the second still 1/86,400 of a day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not as the SI definition. BIPM: the second is defined by the caesium-133 hyperfine frequency (9,192,631,770 Hz). Historically the second was 1/86,400 of a mean solar day; Earth’s rotation is not that uniform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about leap seconds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IERS may insert a leap second in UTC so |UT1 − UTC| stays under 0.9 s. BIPM computes TAI/UTC. A UTC day with a positive leap second has 86,401 SI seconds. That is occasional, announced in IERS Bulletin C — not every day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many seconds in a week or a year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Using 86,400 s/day: 7 days = 604,800 s; a common year 365 × 86,400 = 31,536,000 s; a leap year 366 × 86,400 = 31,622,400 s. Leap seconds are extra and are not in those products."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="secdy">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="secdy.kicker">Time · SI seconds · common day</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">86,400</span>
+        <span class="answer-unit" data-i18n="secdy.unit">SI seconds</span>
+        <p class="answer-eq" id="answer-eq" data-i18n="secdy.eq">in 1 common day (24 × 60 × 60)</p>
+        <p class="answer-ml" data-i18n="secdy.mlLine">Leap seconds (IERS/BIPM) are rare extras — not in this 86,400</p>
+      </div>
+
+      <h1 data-i18n="secdy.h1">How many seconds in a day?</h1>
+      <p class="lede" data-i18n-html="secdy.lede">A common day is counted as <strong>86,400 SI seconds</strong>: 24 × 60 × 60. The SI second is BIPM’s caesium-133 definition, not “whatever Earth did today.” UTC can insert a leap second (IERS); those uncommon UTC days have 86,401 seconds. This page’s default is the common 86,400-second day.</p>
+
+      <form class="converter" id="factor-form" action="#" method="get">
+        <label class="field" for="factor-amount"><span data-i18n="secdy.amount">Days</span>
+          <input id="factor-amount" type="text" inputmode="decimal" value="1" autocomplete="off">
+        </label>
+        <p class="hint" data-i18n="secdy.hint">Fractions work: 1/2, 1/24. Result is 86,400 SI seconds per common day. Leap seconds are not added here.</p>
+      </form>
+
+      <h2 data-i18n="secdy.tableH2">Days to seconds</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="secdy.caption">86,400 s per common day · no leap seconds in the product</caption>
+          <thead>
+            <tr>
+              <th data-i18n="secdy.thFrom">Days</th>
+              <th data-i18n="secdy.thTo">SI seconds</th>
+            </tr>
+          </thead>
+          <tbody id="factor-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="secdy.ladderH2">The 24 × 60 × 60 ladder</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="secdy.ladderCaption">Common civil day, before any leap second</caption>
+          <thead>
+            <tr>
+              <th data-i18n="secdy.thUnit">Unit</th>
+              <th data-i18n="secdy.thSec">Seconds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1 minute</td><td>60</td></tr>
+            <tr><td>1 hour</td><td>3,600</td></tr>
+            <tr><td>1 common day</td><td>86,400</td></tr>
+            <tr><td>UTC day with +1 leap second</td><td>86,401</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="secdy.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="secdy.gotcha1"><strong>86,400 is the count, not Earth’s exact spin.</strong> BIPM defines the second independently of the rotating Earth. A mean solar day is no longer exactly 86,400 SI seconds; that is why leap seconds exist.</li>
+        <li data-i18n-html="secdy.gotcha2"><strong>Leap seconds are infrequent and announced.</strong> IERS decides; BIPM publishes UTC. IERS: |UT1 − UTC| is kept under 0.9 s. A positive leap second makes that UTC day 86,401 s. We do not claim every year gets one, or that negative leap seconds have happened (IERS: none so far in the series they describe).</li>
+        <li data-i18n-html="secdy.gotcha3"><strong>Don’t bake leap seconds into 365 × 86,400.</strong> A common year of 365 common days is 31,536,000 s. Extra UTC leap seconds, if any, sit outside that product. See <a href="./how-many-days-in-a-year.html">days in a year</a>.</li>
+      </ul>
+
+      <h2 data-i18n="secdy.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="secdy.sources">BIPM SI Brochure: the second is defined by the caesium-133 frequency 9,192,631,770 Hz. Historical note: before 1960 the second was 1/86,400 of the mean solar day. <a href="https://www.bipm.org/en/si-base-units/second">bipm.org SI second</a>; <a href="https://www.bipm.org/en/history-si/second">BIPM history of the second</a>. IERS Earth Orientation Center: UTC leap seconds keep |UT1 − UTC| &lt; 0.9 s; 27 s added since 1972 as of their leap-second page; last additional second 1 January 2017, 0h UTC; announced in Bulletin C. <a href="https://hpiers.obspm.fr/eop-pc/index.php?index=leapsecond&amp;lang=en">IERS leap second</a>. Arithmetic: 24 × 60 × 60 = 86,400.</p>
+
+      <h2 data-i18n="secdy.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many seconds are in a day?</summary>
+          <p>86,400 SI seconds in a common day: 24 hours × 60 minutes × 60 seconds. That is the usual civil count.</p>
+        </details>
+        <details>
+          <summary>Is the second still 1/86,400 of a day?</summary>
+          <p>Not as the SI definition. BIPM: the second is defined by the caesium-133 hyperfine frequency (9,192,631,770 Hz). Historically the second was 1/86,400 of a mean solar day; Earth’s rotation is not that uniform.</p>
+        </details>
+        <details>
+          <summary>What about leap seconds?</summary>
+          <p>IERS may insert a leap second in UTC so |UT1 − UTC| stays under 0.9 s. BIPM computes TAI/UTC. A UTC day with a positive leap second has 86,401 SI seconds. That is occasional, announced in IERS Bulletin C — not every day.</p>
+        </details>
+        <details>
+          <summary>How many seconds in a week or a year?</summary>
+          <p>Using 86,400 s/day: 7 days = 604,800 s; a common year 365 × 86,400 = 31,536,000 s; a leap year 366 × 86,400 = 31,622,400 s. Leap seconds are extra and are not in those products.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="secdy.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-days-in-a-year.html" data-i18n="common.relatedDays">days in a year</a></li>
+        <li><a href="./how-many-weeks-in-a-year.html" data-i18n="common.relatedWeeks">weeks in a year</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Cited manufacturer or agency figures. Not a substitute for a contractor, HVAC design, or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./factor.js"></script>
+</body>
+</html>

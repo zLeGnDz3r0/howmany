@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How many days in a year? 365 or 366 (Gregorian)</title>
+  <meta name="description" content="A common Gregorian year has 365 days; a leap year has 366. Leap years: divisible by 4, except century years not divisible by 400 (USNO). Not the same as a sidereal year.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="alternate" hreflang="en" href="./how-many-days-in-a-year.html">
+  <link rel="alternate" hreflang="es" href="./how-many-days-in-a-year.html?lang=es">
+  <link rel="alternate" hreflang="fr" href="./how-many-days-in-a-year.html?lang=fr">
+  <link rel="alternate" hreflang="pt" href="./how-many-days-in-a-year.html?lang=pt">
+  <link rel="alternate" hreflang="de" href="./how-many-days-in-a-year.html?lang=de">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many days are in a year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "365 days in a common Gregorian year; 366 in a leap year (29 February). The civil calendar uses this count, not a sidereal year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Gregorian leap-year rule?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USNO: years evenly divisible by 4 are leap years, except century years that are not evenly divisible by 400. 1700, 1800, 1900, and 2100 are not leap years; 1600, 2000, and 2400 are."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a calendar year the same as a sidereal year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The Gregorian year tracks the tropical (seasonal) year. A sidereal year is Earth’s orbit relative to the stars — a different astronomical year (JPL: 365.25636 days)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the average Gregorian year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "365.2425 days: 97 leap days every 400 years (USNO). That is close to the tropical year (about 365.2422 days), not the sidereal year."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="days">
+  <a class="skip" href="#main" data-i18n="chrome.skipAnswer">Skip to answer</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="wordmark" href="./index.html">howmany</a>
+      <p class="tagline" data-i18n="chrome.tagline">US kitchen volume</p>
+      <nav aria-label="Primary">
+        <a href="./index.html" data-i18n="chrome.converter">Converter</a>
+        <a href="./index.html#pages" data-i18n="chrome.pages">Pages</a>
+        <a href="./index.html#lookups" data-i18n="chrome.lookups">Lookups</a>
+        <a href="./cups-around-the-world.html" data-i18n="chrome.world">Around the world</a>
+      </nav>
+      <details class="lang-switch" data-lang-dropdown>
+        <summary class="lang-btn" data-i18n-aria="chrome.lang" aria-label="Language">
+          <span class="lang-current"><span class="lang-code">EN</span></span>
+        </summary>
+        <ul class="lang-menu" role="listbox"></ul>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap-wide">
+      <p class="kicker" data-i18n="days.kicker">Gregorian civil calendar · not sidereal</p>
+      <div class="answer-block">
+        <span class="answer-num" id="answer-num">365</span>
+        <span class="answer-unit" data-i18n="days.unit">days</span>
+        <p class="answer-eq" id="answer-eq" data-i18n="days.eq">in a common Gregorian year</p>
+        <p class="answer-ml" id="answer-ml" data-i18n="days.mlLine">Leap year = 366 (29 February) · mean Gregorian year = 365.2425 days (USNO)</p>
+      </div>
+
+      <h1 data-i18n="days.h1">How many days in a year?</h1>
+      <p class="lede" data-i18n-html="days.lede">A common Gregorian year has <strong>365 days</strong>. A leap year has <strong>366</strong> (29 February). USNO rule: years divisible by 4, except century years not divisible by 400. 1900 was not a leap year; 2000 was; 2100 will not be. This civil year is <em>not</em> a sidereal year.</p>
+
+      <form class="converter" id="year-form" action="#" method="get">
+        <div class="assumptions">
+          <label class="field" for="year-kind"><span data-i18n="days.yearKind">Calendar year</span>
+            <select id="year-kind">
+              <option value="common" selected data-i18n="days.kindCommon">Common year · 365 days</option>
+              <option value="leap" data-i18n="days.kindLeap">Leap year · 366 days</option>
+            </select>
+          </label>
+          <p class="using-now" id="using-now">Using a common Gregorian year: 365 days. Leap years add 29 February.</p>
+        </div>
+      </form>
+
+      <h2 data-i18n="days.tableH2">Gregorian year lengths</h2>
+      <div class="table-wrap">
+        <table>
+          <caption data-i18n="days.caption">Civil calendar · USNO leap rule</caption>
+          <thead>
+            <tr>
+              <th data-i18n="days.thKind">Year</th>
+              <th data-i18n="days.thDays">Days</th>
+              <th data-i18n="days.thNote">Note</th>
+            </tr>
+          </thead>
+          <tbody id="days-tbody">
+            <tr data-kind="common" class="is-hit"><td>Common</td><td>365</td><td>No 29 February</td></tr>
+            <tr data-kind="leap"><td>Leap</td><td>366</td><td>29 February added</td></tr>
+            <tr data-kind="mean"><td>Mean Gregorian</td><td>365.2425</td><td>97 leap days / 400 years (USNO)</td></tr>
+            <tr data-kind="tropical"><td>Tropical (seasons)</td><td>≈ 365.2422</td><td>USNO; what the leap rule approximates</td></tr>
+            <tr data-kind="sidereal"><td>Sidereal (stars)</td><td>365.25636</td><td>JPL; not the civil year</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 data-i18n="days.ruleH2">Leap-year rule</h2>
+      <p class="note" data-i18n-html="days.ruleNote">USNO: years evenly divisible by 4 are leap years, <strong>except</strong> century years that are not evenly divisible by 400. So 1700, 1800, 1900, and 2100 are not leap years; 1600, 2000, and 2400 are. That puts 97 leap days in 400 years and a mean year of 365.2425 days.</p>
+
+      <h2 data-i18n="days.gotchasH2">Gotchas</h2>
+      <ul class="gotchas">
+        <li data-i18n-html="days.gotcha1"><strong>Century years are the trap.</strong> 2000 was a leap year (divisible by 400). 1900 was not. 2100 will not be. “Every four years” is the Julian rule, not the Gregorian one.</li>
+        <li data-i18n-html="days.gotcha2"><strong>Not a sidereal year.</strong> The civil calendar tracks the tropical (seasonal) year. A sidereal year is the orbit relative to the stars (JPL: 365.25636 days) — longer, and not how we number 365/366.</li>
+        <li data-i18n-html="days.gotcha3"><strong>Weeks don’t come out even.</strong> 365 ÷ 7 leaves 1 day; 366 ÷ 7 leaves 2. See <a href="./how-many-weeks-in-a-year.html">weeks in a year</a>.</li>
+      </ul>
+
+      <h2 data-i18n="days.sourcesH2">Sources</h2>
+      <p class="note" data-i18n-html="days.sources">U.S. Naval Observatory, Leap Years: Gregorian leap rule; tropical year ≈ 365.2422 days; mean Gregorian year 365.2425 days. <a href="https://aa.usno.navy.mil/faq/leap_years">aa.usno.navy.mil/faq/leap_years</a>. Sidereal year 365.25636 days (quasar reference frame): NASA/JPL Solar System Dynamics, Astrodynamic Parameters. <a href="https://ssd.jpl.nasa.gov/astro_par.html">ssd.jpl.nasa.gov/astro_par.html</a>.</p>
+
+      <h2 data-i18n="days.faqH2">FAQ</h2>
+      <div class="faq">
+        <details open>
+          <summary>How many days are in a year?</summary>
+          <p>365 days in a common Gregorian year; 366 in a leap year (29 February). The civil calendar uses this count, not a sidereal year.</p>
+        </details>
+        <details>
+          <summary>What is the Gregorian leap-year rule?</summary>
+          <p>USNO: years evenly divisible by 4 are leap years, except century years that are not evenly divisible by 400. 1700, 1800, 1900, and 2100 are not leap years; 1600, 2000, and 2400 are.</p>
+        </details>
+        <details>
+          <summary>Is a calendar year the same as a sidereal year?</summary>
+          <p>No. The Gregorian year tracks the tropical (seasonal) year. A sidereal year is Earth’s orbit relative to the stars — a different astronomical year (JPL: 365.25636 days).</p>
+        </details>
+        <details>
+          <summary>How long is the average Gregorian year?</summary>
+          <p>365.2425 days: 97 leap days every 400 years (USNO). That is close to the tropical year (about 365.2422 days), not the sidereal year.</p>
+        </details>
+      </div>
+
+      <h2 data-i18n="days.moreH2">More</h2>
+      <ul class="related">
+        <li><a href="./how-many-weeks-in-a-year.html" data-i18n="common.relatedWeeks">weeks in a year</a></li>
+        <li><a href="./how-many-seconds-in-a-day.html" data-i18n="common.relatedSec">seconds in a day</a></li>
+        <li><a href="./index.html" data-i18n="common.relatedConverter">Converter</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p data-i18n="chrome.footerLookups">Sourced lookup. Cited manufacturer or agency figures. Not a substitute for a contractor, HVAC design, or local code.</p>
+      <p data-i18n="chrome.footerBrand">howmany · v1 · no tracking, no cookies, no affiliates</p>
+    </div>
+  </footer>
+  <script src="./i18n.js"></script>
+  <script src="./lookup-util.js"></script>
+  <script src="./year-kind.js"></script>
+</body>
+</html>
