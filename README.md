@@ -79,6 +79,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-cups-in-a-quart.html` — 4 cups
 - `how-many-cups-in-a-gallon.html` — 16 cups
 - `how-many-quarts-in-a-gallon.html` — 4 quarts
+- `how-many-pints-in-a-gallon.html` — 8 pints
 - `how-many-grams-in-an-ounce.html` — 28.3495 g (weight)
 - `cups-around-the-world.html` — country / cup conventions + comparator
 - `world.js` — comparator UI
