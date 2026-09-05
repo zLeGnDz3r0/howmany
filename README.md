@@ -96,6 +96,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-ounces-in-a-quart.html` — **32 fl oz**
 - `how-many-pints-in-a-gallon.html` — **8 pints**
 - `how-many-pints-in-a-quart.html` — **2 pints**
+- `how-many-tablespoons-in-a-pint.html` — **32 tbsp**
 - `factor.js` — amount × sourced factor for pound / mile / acre / seconds pages
 - `how-many-liters-in-a-gallon.html` — **3.785411784 L** US liquid (NIST 231 in³); imperial **4.54609 L** (UK); labeled switch (`gallon.js`)
 - `how-many-weeks-in-a-year.html` — **52 weeks + leftover days** (365÷7 remainder 1; 366÷7 remainder 2); ISO weeks 52 or 53
