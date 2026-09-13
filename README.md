@@ -103,6 +103,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `factor.js` — amount × sourced factor for pound / mile / acre / seconds pages
 - `how-many-liters-in-a-gallon.html` — **3.785411784 L** US liquid (NIST 231 in³); imperial **4.54609 L** (UK); labeled switch (`gallon.js`)
 - `how-many-milliliters-in-a-cup.html` — **236.588 mL** US customary cup (8 fl oz); metric cup 250 mL; US legal cup 240 mL
+- `how-many-milliliters-in-a-tablespoon.html` — **14.787 mL** US tablespoon (½ fl oz / 3 tsp); metric recipes often 15 mL; Australian tbsp 20 mL
 - `how-many-weeks-in-a-year.html` — **52 weeks + leftover days** (365÷7 remainder 1; 366÷7 remainder 2); ISO weeks 52 or 53
 - `how-many-days-in-a-year.html` — **365 / 366** Gregorian (USNO leap rule); not a sidereal year
 - `how-many-seconds-in-a-day.html` — **86,400** SI seconds (24×60×60); leap seconds cited from IERS/BIPM only
