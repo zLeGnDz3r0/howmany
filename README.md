@@ -106,6 +106,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-milliliters-in-a-tablespoon.html` — **14.787 mL** US tablespoon (½ fl oz / 3 tsp); metric recipes often 15 mL; Australian tbsp 20 mL
 - `how-many-milliliters-in-a-teaspoon.html` — **4.929 mL** US teaspoon (⅙ fl oz / ⅓ tbsp); metric recipes often 5 mL
 - `how-many-milliliters-in-a-fluid-ounce.html` — **29.574 mL** US fluid ounce (2 tbsp / 6 tsp); not a weight ounce; imperial fl oz ≈ 28.413 mL
+- `how-many-milliliters-in-a-pint.html` — **473.176 mL** US liquid pint (16 fl oz / 2 cups); imperial pint ≈ 568.261 mL; not a 500 mL round
 - `how-many-weeks-in-a-year.html` — **52 weeks + leftover days** (365÷7 remainder 1; 366÷7 remainder 2); ISO weeks 52 or 53
 - `how-many-days-in-a-year.html` — **365 / 366** Gregorian (USNO leap rule); not a sidereal year
 - `how-many-seconds-in-a-day.html` — **86,400** SI seconds (24×60×60); leap seconds cited from IERS/BIPM only
