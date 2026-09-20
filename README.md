@@ -108,6 +108,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-milliliters-in-a-fluid-ounce.html` — **29.574 mL** US fluid ounce (2 tbsp / 6 tsp); not a weight ounce; imperial fl oz ≈ 28.413 mL
 - `how-many-milliliters-in-a-pint.html` — **473.176 mL** US liquid pint (16 fl oz / 2 cups); imperial pint ≈ 568.261 mL; not a 500 mL round
 - `how-many-milliliters-in-a-quart.html` — **946.353 mL** US liquid quart (32 fl oz / 4 cups / 2 pints); imperial quart ≈ 1136.52 mL; not a 1 L round
+- `how-many-milliliters-in-a-gallon.html` — **3785.412 mL** US liquid gallon (128 fl oz / 16 cups / 8 pints / 4 quarts); exact 3785.411784 mL (231 in³); imperial gallon ≈ 4546.09 mL
 - `how-many-weeks-in-a-year.html` — **52 weeks + leftover days** (365÷7 remainder 1; 366÷7 remainder 2); ISO weeks 52 or 53
 - `how-many-days-in-a-year.html` — **365 / 366** Gregorian (USNO leap rule); not a sidereal year
 - `how-many-seconds-in-a-day.html` — **86,400** SI seconds (24×60×60); leap seconds cited from IERS/BIPM only
