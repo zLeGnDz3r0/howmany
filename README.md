@@ -110,6 +110,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-milliliters-in-a-teaspoon.html` — **4.929 mL** US teaspoon (⅙ fl oz / ⅓ tbsp); metric recipes often 5 mL
 - `how-many-milliliters-in-a-fluid-ounce.html` — **29.574 mL** US fluid ounce (2 tbsp / 6 tsp); not a weight ounce; imperial fl oz ≈ 28.413 mL
 - `how-many-teaspoons-in-a-fluid-ounce.html` — **6 tsp** US fluid ounce (2 tbsp / 29.574 mL); 1 tsp ≈ 4.929 mL; volume, not weight; not the imperial fluid ounce
+- `how-many-tablespoons-in-a-fluid-ounce.html` — **2 tbsp** US fluid ounce (6 tsp / 29.574 mL); 1 tbsp = 0.5 fl oz = 3 tsp ≈ 14.787 mL; volume, not weight; not the imperial fluid ounce
 - `how-many-milliliters-in-a-pint.html` — **473.176 mL** US liquid pint (16 fl oz / 2 cups); imperial pint ≈ 568.261 mL; not a 500 mL round
 - `how-many-milliliters-in-a-quart.html` — **946.353 mL** US liquid quart (32 fl oz / 4 cups / 2 pints); imperial quart ≈ 1136.52 mL; not a 1 L round
 - `how-many-milliliters-in-a-gallon.html` — **3785.412 mL** US liquid gallon (128 fl oz / 16 cups / 8 pints / 4 quarts); exact 3785.411784 mL (231 in³); imperial gallon ≈ 4546.09 mL
