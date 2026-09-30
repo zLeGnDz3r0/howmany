@@ -104,6 +104,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-liters-in-a-gallon.html` — **3.785411784 L** US liquid (NIST 231 in³); imperial **4.54609 L** (UK); labeled switch (`gallon.js`)
 - `how-many-milliliters-in-a-cup.html` — **236.588 mL** US customary cup (8 fl oz); metric cup 250 mL; US legal cup 240 mL
 - `how-many-liters-in-a-cup.html` — **0.236588 L** US customary cup (236.588 mL / 8 fl oz); metric cup 0.25 L; US legal cup 0.24 L
+- `how-many-cups-in-a-liter.html` — **4.22675 cups** US customary (1 / 0.2365882365 L); 33.814 fl oz / 2.11338 pt / 1.05669 qt / 1000 mL; not a 250 mL metric cup or 240 mL legal cup
 - `how-many-liters-in-a-pint.html` — **0.473176 L** US liquid pint (473.176 mL / 16 fl oz / 2 cups); imperial pint ≈ 0.568261 L; not the US dry pint
 - `how-many-liters-in-a-quart.html` — **0.946353 L** US liquid quart (946.353 mL / 32 fl oz / 4 cups / 2 pints); imperial quart ≈ 1.136523 L; not the US dry quart
 - `how-many-milliliters-in-a-tablespoon.html` — **14.787 mL** US tablespoon (½ fl oz / 3 tsp); metric recipes often 15 mL; Australian tbsp 20 mL
