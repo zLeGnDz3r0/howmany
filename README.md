@@ -102,6 +102,7 @@ Portuguese uses European terms (chavena). Numbers from sources are not translate
 - `how-many-teaspoons-in-a-gallon.html` — **768 tsp**
 - `factor.js` — amount × sourced factor for pound / mile / acre / seconds pages
 - `how-many-liters-in-a-gallon.html` — **3.785411784 L** US liquid (NIST 231 in³); imperial **4.54609 L** (UK); labeled switch (`gallon.js`)
+- `how-many-gallons-in-a-liter.html` — **0.264172 gal** US liquid (1 / 3.785411784 ≈ 0.264172052); 1.05669 qt / 2.11338 pt / 4.22675 cups / 33.814 fl oz / 1000 mL; not the imperial gallon (~0.219969); volume, not weight
 - `how-many-milliliters-in-a-cup.html` — **236.588 mL** US customary cup (8 fl oz); metric cup 250 mL; US legal cup 240 mL
 - `how-many-liters-in-a-cup.html` — **0.236588 L** US customary cup (236.588 mL / 8 fl oz); metric cup 0.25 L; US legal cup 0.24 L
 - `how-many-cups-in-a-liter.html` — **4.22675 cups** US customary (1 / 0.2365882365 L); 33.814 fl oz / 2.11338 pt / 1.05669 qt / 1000 mL; not a 250 mL metric cup or 240 mL legal cup
